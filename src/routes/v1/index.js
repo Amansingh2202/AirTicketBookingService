@@ -12,6 +12,11 @@ router.post('/bookings', bookingController.create);
 router.patch('/bookings/:id/cancel',bookingController.cancel)
 router.post('/publish',bookingController.sendMessageToQueue)
 
+router.get('/dummy',(req,res)=>{
+     return  res.json({message:"successful"})
+}
+)
+
 
 
 module.exports=router;
